@@ -1,0 +1,10 @@
+A(x):-Vertex(x,"Green");
+
+B(x,y):-Vertex(x,"Blue"), Vertex(y,"Blue), Edge(x,y);
+
+C(x,y,z):-Vertex(x,c), Vertex(y,c), Vertex(z,c), Edge(x,y), Edge(y,z), Edge(x,z);
+
+E(x):-Edge(x,y);
+D(x):-Vertex(x,c), NOT E(x);
+
+F(x):-Vertex(x,c), Vertex(y,"red"), Edge(x,y);

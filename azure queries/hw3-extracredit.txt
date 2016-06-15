@@ -1,0 +1,21 @@
+Extra Credit
+Used all 6 flight files (Flights-Jan/Feb/March/April/May/June2015).
+Query 1:
+	No index: CPU time = 4672 ms,  elapsed time = 5473 ms.
+	Indexes: CPU time = 9750 ms,  elapsed time = 10303 ms.
+	
+Query 2:
+	No index: CPU time = 13437 ms,  elapsed time = 20787 ms.
+	Indexes: CPU time = 4391 ms,  elapsed time = 4584 ms.
+	
+Query 3:
+	No index: CPU time = 6344 ms,  elapsed time = 11074 ms.
+	Indexes: CPU time = 4922 ms,  elapsed time = 11728 ms.
+	
+Query 4:
+	No index: CPU time = 7391 ms,  elapsed time = 26370 ms.
+	Indexes: CPU time = 7625 ms,  elapsed time = 13937 ms.
+	
+Query 5:
+	No index: CPU time = 10156 ms,  elapsed time = 23114 ms.
+	Indexes: CPU time = 7500 ms,  elapsed time = 8352 ms.

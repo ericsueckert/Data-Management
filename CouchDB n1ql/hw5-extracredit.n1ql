@@ -1,0 +1,21 @@
+/*
+	Eric Eckert
+	Homework 5
+	CSE 414 Spring 16
+	Suciu
+*/
+
+Extra Credit Query:
+
+write a query using the NEST operator that answers question 7 but returns a list of 
+mountain names and mountain heights for each country name. Do not do it using ARRAY_AGG. 
+The staff isn't even sure how to do this.
+
+select c.name country, m.name mountain, m.height
+from mondial x
+unnest x.mondial z
+unnest z.country c
+unnest z.mountain m
+where c.["-car_code"] = m.["-country"]
+and tonumber(m.height) > 2000
+order by m.name, c.name;

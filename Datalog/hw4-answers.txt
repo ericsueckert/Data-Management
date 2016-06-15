@@ -1,0 +1,38 @@
+Eric Eckert
+Homework 4
+CSE 414 Spring 16
+Suciu
+
+1.a) 
+MultiManager(eid, name):- Employee(eid, name, office), Manager(eid, mid1), Manager(eid, mid2), NOT mid1 = mid2;
+
+2.a) 
+--Main Query
+IndieEmployee(eid, name):- Employee(eid, name, office), NOT HasManager(eid);
+
+--Sub Query
+HasManager(eid):- Employee(eid, name, office), Manager(eid, mid);
+
+3.a) 
+AliceManager(office2):- Employee(eid, 'Alice', office1), Manager(eid, mid), Employee(mid, name, office2);
+
+4.a) 
+SharedOffice(mid, name2, office):- Employee(eid, name, office), Manager(eid, mid), Employee(mid, name2, office);
+	
+5.a) 
+--Main Query
+SecondManager(eid, name):- Employee(eid, name, office), NOT ManagerOfEmployee(eid); 
+
+--Sub Queries
+IsManager(mid):- Employee(eid, name, office), Manager(eid, mid);
+
+ManagerOfEmployee(mid):- Employee(eid, name, office), Manager(eid, mid), NOT IsManager(eid);
+
+
+Extra Credit:
+--Main Query
+AliceMinions(eid, name, office):- Employee(eid, name, office), ReportToAlice(eid);
+AliceMinions(eid, name, office):- Manager(eid, mid), ReportToAlice(mid), Employee(eid, name, office);
+--Sub Query
+ReportToAlice(eid):- Employee(eid, name, office), Manager(eid, mid), Employee(mid, 'Alice', office);
+
